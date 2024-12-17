@@ -30,7 +30,7 @@ Os testes da API utilizam os endpoints disponíveis em [Swagger API](https://ser
 
 ## Pré-requisitos
 
-- **Node.js** (versão 22 ou superior)
+- **Node.js** (versão 20 ou superior)
 - **Cypress** (versão utilizada 13.16.1)
 - **npm** (gerenciador de pacotes do Node.js)
 
