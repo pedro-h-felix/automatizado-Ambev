@@ -16,19 +16,20 @@ Os testes para o frontend utilizam a aplicação disponível em [https://front.s
 
 1. **Login**: Verifica o fluxo de login com credenciais válidas e inválidas.
 2. **Produtos**: Verifica a exibição de produtos e detalhes individuais.
-3. **Carrinho**: Valida a adição e remoção de produtos no carrinho de compras.
+3. **Cadastrar Produto**: Cadastra o produto a partir de informações e detalhes individuais.
 
 ### API
 
 Os testes da API utilizam os endpoints disponíveis em [Swagger API](https://serverest.dev/). Os cenários implementados são:
 
-1. **Usuários**: Testa a criação, atualização e exclusão de usuários.
-2. **Produtos**: Verifica o CRUD de produtos.
-3. **Pedidos**: Valida a criação e consulta de pedidos.
+1. **Login**: Testa a conexão sendo válida ou inválida e verificando rota de Login.
+2. **Produtos**: Verifica os valores do primeiro produto retornado, podendo variar conforme a atualização da API.
+3. **Carrinho**: Valida o(s) produtos contidos no carrinho, podendo variar conforme atualização do API.
 
 ## Pré-requisitos
 
 - **Node.js** (versão 14 ou superior)
+- **Cypress** (versão utilizada 13.16.1)
 - **npm** (gerenciador de pacotes do Node.js)
 
 ## Instalação
