@@ -33,6 +33,7 @@ describe('API Produtos Test', () => {
         expect(produto.descricao).to.eq('Mouse'); // Descrição do primeiro produto esperado
         expect(produto.quantidade).to.eq(381); // Quantidade do primeiro produto esperado
         expect(produto._id).to.eq('2oKefF8kXF4dcsPG') // Id do primeiro produto esperado
+        cy.wait(1000);
       });
     });
   

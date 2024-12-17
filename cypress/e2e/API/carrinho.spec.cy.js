@@ -24,6 +24,7 @@ describe('API Carrinhos Test', () => {
         // Verifique o primeiro carrinho retornado
         const carrinho = response.body.carrinhos[0];
         cy.log('Carrinho:', JSON.stringify(carrinho, null, 2));
+        cy.wait(1000);
 
         /*  *** Informações variando de acordo com o SWAGGER, abaixo realiza verificações e validações do produto que pode ser visualizado
                 pelo log acima ***

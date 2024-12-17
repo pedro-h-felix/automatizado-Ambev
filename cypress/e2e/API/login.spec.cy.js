@@ -15,6 +15,7 @@ describe('API Login Test', () => {
       }).then((response) => {
         // Verifique se o status code é 200
         expect(response.status).to.eq(200);
+        cy.wait(1000);
   
         // Verifique se o corpo da resposta contém o token de autorização
         expect(response.body.authorization).to.exist;
@@ -41,6 +42,7 @@ describe('API Login Test', () => {
         // Verifique se o status code é 401 (Unauthorized) após o tempo de expiração
         expect(response.status).to.eq(401);
         expect(response.body.message).to.eq('Email e/ou senha inválidos'); // Mensagem que a API retornará em caso de erro de autenticação
+        cy.wait(1000);
       });
     });
   
@@ -53,6 +55,7 @@ describe('API Login Test', () => {
         // Verifique se o status code é 405 (Method Not Allowed)
         expect(response.status).to.eq(405);
         expect(response.body.message).to.eq('Não é possível realizar GET em /login. Acesse https://serverest.dev para ver as rotas disponíveis e como utilizá-las.');
+        cy.wait(1000);
       });
     });
   });
