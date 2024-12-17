@@ -5,7 +5,30 @@ module.exports = defineConfig({
     baseUrl: 'https://serverest.dev',
     supportFile: false,
     setupNodeEvents(on, config) {
-      // Implementar event listeners se necessário
     }
   }
 })
+
+module.exports = {
+    e2e: {
+      video: false, 
+      screenshotOnRunFailure: true,  
+      reporter: 'spec',  
+      env: {
+        CYPRESS_LOGGING: true  
+      },
+    },
+  };
+  
+module.exports = {
+    e2e: {
+      video: false,
+      screenshotOnRunFailure: true,
+      reporter: 'spec',
+      env: {
+        CYPRESS_LOGGING: true,
+        CYPRESS_NETWORK_LOGGING: true,  // Habilita logs de rede
+      },
+    },
+  };
+  

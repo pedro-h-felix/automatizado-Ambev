@@ -19,10 +19,12 @@ jobs:
       - name: Instalar Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 16
+          node-version: '16'
 
       - name: Instalar dependências
         run: npm install
 
       - name: Executar testes com Cypress
         run: npm test
+        env:
+          CI: true

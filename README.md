@@ -37,5 +37,5 @@ Os testes da API utilizam os endpoints disponíveis em [Swagger API](https://ser
 1. Clone o repositório:
 
    ```bash
-   git clone https://github.com/seu-usuario/servidor-tests-automatizados.git
-   cd servidor-tests-automatizados
+   git clone https://github.com/pedro-h-felix/automatizado-Ambev.git
+   cd automatizado-Ambev
