@@ -1,5 +1,5 @@
 {
-  "name": "servidor-tests-automatizados",
+  "name": "automatizado-Ambev",
   "version": "1.0.0",
   "description": "Testes automatizados com Cypress para Serverest.",
   "scripts": {
