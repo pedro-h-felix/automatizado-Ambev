@@ -2,7 +2,7 @@
 
 Este repositório contém testes E2E automatizados para o frontend e a API da aplicação [Serverest](https://serverest.dev/). Foram criados 3 cenários de teste para o frontend e 3 cenários para a API usando o framework **Cypress** com a linguagem **JavaScript**.
 
-**Devido a volatilidade do site, alguns cenários apresentam erro pois pessoas simultaneamente utilizando o site para realizar testes, sendo assim pode ser que o usuário seja deletado e ocorra erros durante execução via Pipeline**
+**Devido a volatilidade do site, alguns cenários apresentam erro pois há pessoas simultaneamente utilizando o site para realizar testes, sendo assim pode ser que o usuário seja deletado e ocorra erros durante execução via Pipeline**
 
 ## Tecnologias Utilizadas
 
