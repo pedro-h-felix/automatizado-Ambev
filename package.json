@@ -1,0 +1,15 @@
+{
+  "name": "automatizado-Ambev",
+  "version": "1.0.0",
+  "description": "Testes automatizados com Cypress para Serverest.",
+  "scripts": {
+    "test": "npx cypress run",
+    "open": "npx cypress open"
+  },
+  "keywords": [],
+  "author": "Pedro",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^13.16.1"
+  }
+}

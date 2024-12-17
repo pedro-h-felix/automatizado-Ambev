@@ -1,0 +1,50 @@
+name: CI/CD
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  cypress-run:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout do código do repositório
+      - name: Checkout do código
+        uses: actions/checkout@v3
+
+      # Instalar Node.js
+      - name: Instalar Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+
+      # Limpar dependências e reinstalar (garantir que o Cypress e suas dependências estejam atualizadas)
+      - name: Limpar dependências e reinstalar
+        run: |
+          rm -rf node_modules
+          rm package-lock.json
+          npm install
+
+      # Verificar a instalação do Cypress
+      - name: Verificar instalação do Cypress
+        run: npx cypress verify
+
+      # Garantir que o Cypress tenha permissões corretas para execução
+      - name: Garantir permissões do Cypress
+        run: chmod +x node_modules/.bin/cypress || true
+
+      # Executar os testes Cypress (garantir que o supportFile está configurado corretamente)
+      - name: Executar testes com Cypress
+        run: npm test
+        env:
+          CI: true
+
+      # Coletar logs de execução para garantir visibilidade
+      - name: Coletar e exibir logs dos testes
+        run: |
+          cat cypress/results/*.log || true
