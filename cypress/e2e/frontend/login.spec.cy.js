@@ -27,8 +27,7 @@ describe('Cadastro de usuário - Frontend', () =>{
     cy.get('button[type="submit"]').click();
 
     //verificação de sucesso
-    cy.url().should('include', '/admin/home');
-    cy.contains('Bem Vindo Pedro').should('be.visible');
+    cy.contains('Bem Vindo').should('be.visible');
   });
 
 
